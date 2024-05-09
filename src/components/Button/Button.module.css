@@ -1,0 +1,13 @@
+.button {
+	border: none;
+	padding: 8px 12px;
+	margin: 10px;
+}
+
+.button.primary {
+	background-color: aqua;
+}
+
+.button.secondary {
+	background-color: palevioletred;
+}

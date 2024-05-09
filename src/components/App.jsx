@@ -3,6 +3,7 @@ import './App.css';
 import BookList from './BookList';
 import Card from './Card';
 import Product from './Product';
+import { Button } from './Button/Button';
 
 function App() {
 	const favoriteBooks = [
@@ -42,6 +43,8 @@ function App() {
 			<Alert variant='success' elevated='true'>
 				Payment received, thank you for your purchase!
 			</Alert>
+			<Button variant='primary'>Login</Button>
+			<Button variant='secondary'>Follow</Button>
 		</>
 	);
 }
