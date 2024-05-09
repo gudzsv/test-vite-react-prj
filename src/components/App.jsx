@@ -1,4 +1,4 @@
-import { Alert } from './Alert';
+import { Alert } from './Alert/Alert';
 import './App.css';
 import BookList from './BookList';
 import Card from './Card';
@@ -35,9 +35,13 @@ function App() {
 					children tex here children it is Like template
 				</p>
 			</Card>
-			<Alert>Please Update your email!</Alert>
-			<Alert>There was an error during transaction!</Alert>
-			<Alert>Payment received, thank you for your purchase!</Alert>
+			<Alert variant='info' outlined='true'>
+				Please Update your email!
+			</Alert>
+			<Alert variant='error'>There was an error during transaction!</Alert>
+			<Alert variant='success' elevated='true'>
+				Payment received, thank you for your purchase!
+			</Alert>
 		</>
 	);
 }
