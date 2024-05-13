@@ -4,6 +4,8 @@ import BookList from './BookList';
 import Card from './Card';
 import Product from './Product';
 import { Button } from './Button/Button';
+import { UserMenu } from './UserMenu/UserMenu';
+import CustomButton from './CustomButton/CustomButton';
 
 function App() {
 	const favoriteBooks = [
@@ -13,6 +15,8 @@ function App() {
 	];
 	return (
 		<>
+			<UserMenu name='gudzsv'>{'gudzsv'}</UserMenu>
+			<hr />
 			<h1>Products</h1>
 			<Product
 				name='Tacos With Lime'
@@ -24,10 +28,8 @@ function App() {
 				imgUrl='https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?dpr=2&h=480&w=640'
 				price={14.29}
 			/>
-
 			<h2>Books of the week</h2>
 			<BookList books={favoriteBooks} />
-
 			<h2>Card children</h2>
 			<Card title='CARD'>
 				<h3>Card children title</h3>
@@ -45,6 +47,8 @@ function App() {
 			</Alert>
 			<Button variant='primary'>Login</Button>
 			<Button variant='secondary'>Follow</Button>
+			<CustomButton message='Playing music!'>Play some music</CustomButton>
+			<CustomButton message='Uploading your data!'>Upload data</CustomButton>
 		</>
 	);
 }
