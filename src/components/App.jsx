@@ -7,6 +7,9 @@ import { Button } from './Button/Button';
 import { UserMenu } from './UserMenu/UserMenu';
 import CustomButton from './CustomButton/CustomButton';
 import SearchBar from './SearchBar/SearchBar';
+import LoginForm from './LoginForm/LoginForm';
+import { useState } from 'react';
+import LangSwitcher from './LangSwitcher/LangSwitcher';
 
 function App() {
 	const favoriteBooks = [
@@ -15,8 +18,14 @@ function App() {
 		{ id: 'id-3', name: 'React Router overview' },
 	];
 
+	const [lang, setLang] = useState('uk');
+
 	return (
 		<>
+			<div>
+				<p>Selected language: {lang}</p>
+				<LangSwitcher value={lang} onSelect={setLang} />
+			</div>
 			<h3>SearchBar</h3>
 			<SearchBar />
 			<UserMenu name='gudzsv'>{'gudzsv'}</UserMenu>
@@ -53,6 +62,7 @@ function App() {
 			<Button variant='secondary'>Follow</Button>
 			<CustomButton message='Playing music!'>Play some music</CustomButton>
 			<CustomButton message='Uploading your data!'>Upload data</CustomButton>
+			<LoginForm />
 		</>
 	);
 }
