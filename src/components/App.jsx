@@ -11,6 +11,7 @@ import LoginForm from './LoginForm/LoginForm';
 import { useState } from 'react';
 import LangSwitcher from './LangSwitcher/LangSwitcher';
 import RadioButtons from './RadioButtons/RadioButtons';
+import CheckBox from './CheckBox/CheckBox';
 
 function App() {
 	const favoriteBooks = [
@@ -66,6 +67,8 @@ function App() {
 			<LoginForm />
 			<hr />
 			<RadioButtons />
+			<hr />
+			<CheckBox />
 		</>
 	);
 }
