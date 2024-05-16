@@ -6,6 +6,7 @@ import Product from './Product';
 import { Button } from './Button/Button';
 import { UserMenu } from './UserMenu/UserMenu';
 import CustomButton from './CustomButton/CustomButton';
+import SearchBar from './SearchBar/SearchBar';
 
 function App() {
 	const favoriteBooks = [
@@ -16,6 +17,8 @@ function App() {
 
 	return (
 		<>
+			<h3>SearchBar</h3>
+			<SearchBar />
 			<UserMenu name='gudzsv'>{'gudzsv'}</UserMenu>
 			<hr />
 			<h1>Products</h1>
