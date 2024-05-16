@@ -10,6 +10,7 @@ import SearchBar from './SearchBar/SearchBar';
 import LoginForm from './LoginForm/LoginForm';
 import { useState } from 'react';
 import LangSwitcher from './LangSwitcher/LangSwitcher';
+import RadioButtons from './RadioButtons/RadioButtons';
 
 function App() {
 	const favoriteBooks = [
@@ -63,6 +64,8 @@ function App() {
 			<CustomButton message='Playing music!'>Play some music</CustomButton>
 			<CustomButton message='Uploading your data!'>Upload data</CustomButton>
 			<LoginForm />
+			<hr />
+			<RadioButtons />
 		</>
 	);
 }
