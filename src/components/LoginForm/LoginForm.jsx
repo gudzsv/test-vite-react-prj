@@ -1,8 +1,8 @@
 import { useEffect, useId, useState } from 'react';
 
 const defaultFormData = {
-	login: 'Your login',
-	password: 'Your password',
+	login: '',
+	password: '',
 };
 
 const getLSFData = () => {
@@ -21,24 +21,16 @@ const LoginForm = () => {
 	const id = useId();
 
 	const handleChange = (evt) => {
-		if (evt.target.name === 'login') {
-			setFormData({
-				...formData,
-				login: evt.target.value,
-			});
-		} else if (evt.target.name === 'password') {
-			setFormData({
-				...formData,
-				password: evt.target.value,
-			});
-		}
+		setFormData({
+			...formData,
+			[evt.target.name]: evt.target.value,
+		});
 	};
 
 	const handleSubmit = (evt) => {
 		evt.preventDefault();
-		const form = evt.target;
 		console.log(formData);
-		form.reset();
+		setFormData(defaultFormData);
 	};
 
 	return (

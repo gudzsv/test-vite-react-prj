@@ -12,6 +12,7 @@ import { useState } from 'react';
 import LangSwitcher from './LangSwitcher/LangSwitcher';
 import RadioButtons from './RadioButtons/RadioButtons';
 import CheckBox from './CheckBox/CheckBox';
+import FormikFeedbackForm from './FormikFeedbackForm/FormikFeedbackForm';
 
 function App() {
 	const favoriteBooks = [
@@ -69,6 +70,8 @@ function App() {
 			<RadioButtons />
 			<hr />
 			<CheckBox />
+			<hr />
+			<FormikFeedbackForm />
 		</>
 	);
 }
